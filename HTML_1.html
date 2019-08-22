@@ -2,12 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/css2.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
 
     <body>
+        <a href="#food_input">food</a>
+        <div class="ani"></div>
         <script src="./JavaScript/JavaScript_1.js"></script>
-
-        <h1>What is your favorite food?</h1>
+        <script>document.body.className += ' fade-out';</script>
+        <script>
+        $(function() {
+            $('body').removeClass('fade-out');
+        });
+        </script>
+        <h1 style="font-size:10vw;"">What is your favorite food?</h1>
         <h3>Pick your favorite food from this list:</h3>
         <ul>
             <li>Pizza</li>
@@ -20,6 +29,16 @@
         <button onclick="foodFunction()">Submit Food</button>
         <p id="Output"></p>
 
+        
+        <div id="slideshow">
+                <div>
+                  <img src="./img/thumbnail_3.jpg">
+                </div>
+                <div>
+                  <img src="./img/thumbnail_4.jpg">
+                </div>
+             </div>
+
         <h2 class="target" onclick="myFunction()">target text</h2>
         <h4 class="target" onclick="myFunction()">not target text</h4>
 
@@ -27,5 +46,17 @@
         <button onclick="myDraw()">draw</button>
 
 
+        <button class="open-button" onclick="openForm()">Open Form</button>
+        <div class="form-popup" id="myForm">
+        <form class="form-container" name="numForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            Number: <input type="text" name="pnum">
+            <input type="submit" value="Submit">
+            Name: <input type="text" name="name">
+            <input type="submit" value="Submit">
+            <button class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+        </div>  
+
+        <img class="testimg" src="./dogs.jpg">
     </body>
 </html>

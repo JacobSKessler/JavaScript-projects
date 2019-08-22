@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<!--head-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Jacob Kessler</title>
+        <link rel="stylesheet" type="text/css" href="./Stylesheet/portfolio.css">
+        <script src="./JS/portfolio.js"
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+
+<!--body-->
+<body class="Background">
+    <!--fade effect-->
+    <script>
+    document.body.className += ' fade-out';
+    $(function() {
+        $('body').removeClass('fade-out');
+        }
+    );
+
+    </script>
+
+<!--navbar-->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a onclick="openForm()">Contact</a>
+    </div>
+
+<div class="btn cancel" onclick="closeForm()">
+
+<!--home-->
+    <div id="Home">
+        <br>
+        <br>
+
+<!--video-->
+        <video autoplay muted loop id="Boat_Video">
+            <source src="./Stylesheet/Video/Boat.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+<!--video text-->
+    <div class="Video_Text">
+        <h1 style="color: chartreuse;">Jacob Kessler's Portfolio</h1>
+            <p>
+                <strong>
+                    <center>
+                        <q>Programing is the backbone of the information age and only through understanding can we prevent being left behind</q>
+                        <br>
+                        <br>
+                        My name is Jacob and this is my portfolio website.
+                        <br>Thank you for stopping by and enjoy!
+                    </center>
+                </strong>
+            </p>
+    </div>
+
+<!--Slideshow section-->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+
+                <div class="mySlides fade">
+                        <div class="Slide_Number">1 / 6</div>
+                            <img class="Slide_Show_Images" src="Stylesheet/Images/Picture_of_You.jpg" style="width:100%">
+                            <div class="text">I'm ready to help!</div>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                            <div class="Slide_Number">2 / 6</div>
+                            <img class="Slide_Show_Images" src="Stylesheet/Images/HTML_CSS_and_JavaScript.jpeg" style="width:100%">
+                            <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                        </div>
+                
+                        <div class="mySlides fade">
+                            <div class="Slide_Number">3 / 6</div>
+                            <img class="Slide_Show_Images" src="Stylesheet/Images/Python.png" style="width:100%">
+                            <div class="text">the popular programming language Python,</div>
+                        </div>
+                
+                        <div class="mySlides fade">
+                            <div class="Slide_Number">4 / 6</div>
+                            <img class="Slide_Show_Images" src="Stylesheet/Images/C_Sharp_and_Dot_NET.png" style="width:100%">
+                            <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+                        </div>
+                
+                        <div class="mySlides fade">
+                            <div class="Slide_Number">5 / 6</div>
+                            <img class="Slide_Show_Images" src="Stylesheet/Images/SQL_and_Database.jpg" style="width:100%">
+                            <div class="text">back end development, databases and SQL.</div>
+                        </div>
+                
+                        <div class="mySlides fade">
+                            <div class="Slide_Number">6 / 6</div>
+                            <img class="Slide_Show_Images" src="Stylesheet/Images/Coding_1.jpg" style="width:100%">
+                            <div class="text"> 
+                                <a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+                            </div>
+                        </div>
+
+                        <a class="Previous" onclick="plusSlides(-1)">&#10094</a>
+                        <a class="Next" onclick="plusSlides(1)">&#10095</a>
+            </div>
+        <br>
+
+            <div style="text-align: center">
+            
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+    </div>
+<!--js scripting for precedence-->
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n>slides.length) {slideIndex = 1}
+        if (n<1) {slideIndex = slides.length}
+        for (i=0;i<slides.length;i++) {
+            slides[i].style.display = "none";
+        }
+        for (i=0;i<dots.length;i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+
+<!--about section-->
+    <div class="Row" id="About">
+        <div class="Column_2">
+            <img src="./Stylesheet/Images/Development.jpg" alt="Laptop">
+        </div>
+
+        <div class="Column_1">
+            <h1>About</h1>
+                <p>I'm a fresh programer looking to get into a carrer in coding. I enjoy slow travel by boat and train.<br><br>I am a student of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML and CSS. <br><br><a href="#Contact">Contact</a> me below!</p>
+        </div>
+    </div> 
+
+<!--github section-->
+    <div class="Row" id="GitHub">
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p>You can view my progress on my GitHub profile here:<br>
+            <center><a href="https://github.com/JacobSKessler" target="_blank">Jacob Kessler's GitHub</a></center></p>
+        </div>
+
+        <div class="Column_2">
+                <a href="https://github.com/JacobSKessler" target="_blank"><img src="./Stylesheet/Images/GitHub.png" alt="GitHub"></a>
+        </div>
+    </div>
+</div>
+
+<!--contact section-->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/Kessler_Jacob@hotmail.com" method="POST" class="form-container"></form>
+            <h1>Contact</h1>
+                <label for="name">Name:</label>
+                    <input type="text" placeholder="Please enter your name here" name="name" required>
+                <label for="phone">Phone:</label>
+                    <input type="text" placeholder="Please enter your phone number here" name="phone">
+                <label for="email">Email:</label>
+                    <input type="text" placeholder="Please enter your email here" name="email" required>
+                <label for="message">Message</label>
+                    <input type="text" placeholder="Please enter your message here" name="message">
+                    
+        <button type="submit" class="btn">SUBMIT</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+    </div>
+
+<!--footer section-->
+    <footer>
+        <p>
+            <center id="foot_text">&copy; Prosper Counsulting Inc., <a href="https://learncodinganywhere.com/">The Tech Academy</a></center><br>
+        </p>
+    </footer>
+
+</body>
+</html>
