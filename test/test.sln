@@ -3,12 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "test", "test\test.njsproj", "{6ADDF3D8-1617-41CE-94CE-3A33CA01C42D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C9351DED-7D29-4EF8-9D20-C6F83A391C77}"
 	ProjectSection(SolutionItems) = preProject
 		index.html = index.html
 	EndProjectSection
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "test", "test\test.njsproj", "{6ADDF3D8-1617-41CE-94CE-3A33CA01C42D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
