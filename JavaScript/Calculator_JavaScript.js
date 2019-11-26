@@ -63,7 +63,7 @@ function Update_Display() {
 Update_Display();
 
 const keys = document.querySelector('.calculator-keys');
-keys.addEventListener('click', (event)); {
+keys.addEventListener('click', (event) => {
     const { target } = event;
     if (!target.matches('button')) {
         return;
@@ -85,4 +85,4 @@ keys.addEventListener('click', (event)); {
     }
     Input_Digit(target.value);
     Update_Display();
-} 
+}) 
